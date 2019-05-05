@@ -1,0 +1,16 @@
+{
+  "short_name": "SEEiHealth",
+  "name": "SEEiHealth",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "display": "minimal-ui",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary"
+}

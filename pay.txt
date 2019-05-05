@@ -1,0 +1,477 @@
+20180821
+测试微信支付
+1.下单
+	(1)下单, 没有支付 --- payStatus:2 支付失败
+	(2)下单, 立即支付 --- payStatus:1 支付成功
+	(3)下单, 扫了码, 在轮询结束后, 再支付 --- 订单被关闭
+	
+2.查询
+	(1)查询已支付订单
+	{ return_code: 'SUCCESS',
+	  return_msg: 'OK',
+	  appid: 'wx315ac5d37a858129',
+	  mch_id: '1274134501',
+	  nonce_str: 'OQBeJk8IWPWXAJ0y',
+	  sign: 'F4F43B65FF5B22BA49C172657BAC154C',
+	  result_code: 'SUCCESS',
+	  openid: 'o1IeduC5u5f5fGzX07bcKL2_bH14',
+	  is_subscribe: 'Y',
+	  trade_type: 'NATIVE',
+	  bank_type: 'CFT',
+	  total_fee: '1',
+	  fee_type: 'CNY',
+	  transaction_id: '4200000178201808215372967492',
+	  out_trade_no: '20180821174779',
+	  attach: '',
+	  time_end: '20180821172539',
+	  trade_state: 'SUCCESS',
+	  cash_fee: '1',
+	  trade_state_desc: '支付成功' }
+	
+	(2)查询未支付订单
+	{ return_code: 'SUCCESS',
+	  return_msg: 'OK',
+	  appid: 'wx315ac5d37a858129',
+	  mch_id: '1274134501',
+	  nonce_str: 'gnYhUl9MsPt03hRk',
+	  sign: '1D042A0DB2158695DB5AA66049B3A577',
+	  result_code: 'SUCCESS',
+	  out_trade_no: '20180821994268',
+	  trade_state: 'NOTPAY',
+	  trade_state_desc: '订单未支付' }
+
+	(3)查询已关闭订单
+	{ return_code: 'SUCCESS',
+	  return_msg: 'OK',
+	  appid: 'wx315ac5d37a858129',
+	  mch_id: '1274134501',
+	  nonce_str: 's0Rl3XKQLi7V7c9I',
+	  sign: 'FFC508E360F522159ABCD9898B373E13',
+	  result_code: 'SUCCESS',
+	  out_trade_no: '20180821557015',
+	  attach: '',
+	  trade_state: 'CLOSED',
+	  trade_state_desc: '订单已关闭' }
+	
+	(4)查询不存在订单
+	{ return_code: 'SUCCESS',
+	  return_msg: 'OK',
+	  appid: 'wx315ac5d37a858129',
+	  mch_id: '1274134501',
+	  nonce_str: '4aYfknPXfQGHEhZT',
+	  sign: 'C5E3AE52CA6D16008D61FCE01F743845',
+	  result_code: 'FAIL',
+	  err_code: 'ORDERNOTEXIST',
+	  err_code_des: 'order not exist' }
+	
+	(5)查询已退款订单
+	{ return_code: 'SUCCESS',
+	  return_msg: 'OK',
+	  appid: 'wx315ac5d37a858129',
+	  mch_id: '1274134501',
+	  nonce_str: 'njV20LkXtEPQ1hna',
+	  sign: 'B9E3BFD6F4648492FFDAA463EA4E5511',
+	  result_code: 'SUCCESS',
+	  openid: 'o1IeduC5u5f5fGzX07bcKL2_bH14',
+	  is_subscribe: 'Y',
+	  trade_type: 'NATIVE',
+	  bank_type: 'CFT',
+	  total_fee: '1',
+	  fee_type: 'CNY',
+	  transaction_id: '4200000165201808217781847728',
+	  out_trade_no: '20180821665587',
+	  attach: '',
+	  time_end: '20180821163406',
+	  trade_state: 'REFUND',
+	  cash_fee: '1',
+	  trade_state_desc: '订单发生过退款，退款详情请查询退款单' }
+	
+	
+3.退款
+	(1)退款已支付订单
+	{ return_code: 'SUCCESS',
+	  return_msg: 'OK',
+	  appid: 'wx315ac5d37a858129',
+	  mch_id: '1274134501',
+	  nonce_str: 'rXO9gjgeM1yOrdhB',
+	  sign: 'FD5CBC9BCEF9143A48246B51930CE3F2',
+	  result_code: 'SUCCESS',
+	  transaction_id: '4200000165201808217781847728',
+	  out_trade_no: '20180821665587',
+	  out_refund_no: '20180821665587',
+	  refund_id: '50000007722018082106052170678',
+	  refund_channel: '',
+	  refund_fee: '1',
+	  coupon_refund_fee: '0',
+	  total_fee: '1',
+	  cash_fee: '1',
+	  coupon_refund_count: '0',
+	  cash_refund_fee: '1' }
+
+	(2)退款未支付订单
+	{ return_code: 'SUCCESS',
+	  return_msg: 'OK',
+	  appid: 'wx315ac5d37a858129',
+	  mch_id: '1274134501',
+	  nonce_str: 'YVWFIrmKumfDDK7k',
+	  sign: 'B873E060B2DD25DB3FA7186E09E7097C',
+	  result_code: 'FAIL',
+	  err_code: 'ORDERNOTEXIST',
+	  err_code_des: '订单不存在' }
+	(3)退款已关闭订单
+	{ return_code: 'SUCCESS',
+	  return_msg: 'OK',
+	  appid: 'wx315ac5d37a858129',
+	  mch_id: '1274134501',
+	  nonce_str: 'UoJAVWzefWx3XnNw',
+	  sign: '608C6202153F2F0086ACE4F05AC053A0',
+	  result_code: 'FAIL',
+	  err_code: 'ERROR',
+	  err_code_des: '订单已关闭' }
+
+	(4)退款不存在订单
+	{ return_code: 'SUCCESS',
+	  return_msg: 'OK',
+	  appid: 'wx315ac5d37a858129',
+	  mch_id: '1274134501',
+	  nonce_str: 'YcHoNfCT6PQec7YD',
+	  sign: 'EBF22C679FF39C06CA4C333024509A8D',
+	  result_code: 'FAIL',
+	  err_code: 'ORDERNOTEXIST',
+	  err_code_des: '订单不存在' }	
+	(5)退款已退款订单
+	{ returnCode: 'SUCCESS',
+	  returnMsg: 'OK',
+	  appid: 'wx315ac5d37a858129',
+	  mchId: '1274134501',
+	  nonceStr: 'dIy0owO6a6BugVk3',
+	  sign: 'D509B692D029EB43CABABF3517E57435',
+	  resultCode: 'SUCCESS',
+	  transactionId: '4200000165201808217781847728',
+	  outTradeNo: '20180821665587',
+	  outRefundNo: '20180821665587',
+	  refundId: '50000007722018082106052170678',
+	  refundChannel: '',
+	  refundFee: '1',
+	  couponRefundFee: '0',
+	  totalFee: '1',
+	  cashFee: '1',
+	  couponRefundCount: '0',
+	  cashRefundFee: '1' }
+
+
+
+4.退款查询
+	(1)退款查询已支付订单
+	{ appid: 'wx315ac5d37a858129',
+	  err_code: 'REFUNDNOTEXIST',
+	  err_code_des: 'not exist',
+	  mch_id: '1274134501',
+	  nonce_str: 'B9O0s3lbVHOcyUqy',
+	  result_code: 'FAIL',
+	  return_code: 'SUCCESS',
+	  return_msg: 'OK',
+	  sign: 'D82BA90AEB96EEE7C845FB7D371AB580' }
+	
+	(2)退款查询未支付订单
+	{ appid: 'wx315ac5d37a858129',
+	  err_code: 'REFUNDNOTEXIST',
+	  err_code_des: 'not exist',
+	  mch_id: '1274134501',
+	  nonce_str: 'FfxwV9jEpUUpH3ou',
+	  result_code: 'FAIL',
+	  return_code: 'SUCCESS',
+	  return_msg: 'OK',
+	  sign: '5EAEC695A232653E4843F05353B54FEE' }
+
+	(3)退款查询已关闭订单
+	{ appid: 'wx315ac5d37a858129',
+	  err_code: 'REFUNDNOTEXIST',
+	  err_code_des: 'not exist',
+	  mch_id: '1274134501',
+	  nonce_str: 'dujAhL7pAqpGqb5X',
+	  result_code: 'FAIL',
+	  return_code: 'SUCCESS',
+	  return_msg: 'OK',
+	  sign: '0C0633BF03112AD79AF12A891CA023CA' }
+
+	(4)退款查询不存在订单
+	{ appid: 'wx315ac5d37a858129',
+	  err_code: 'REFUNDNOTEXIST',
+	  err_code_des: 'not exist',
+	  mch_id: '1274134501',
+	  nonce_str: '9tY7w6Yh7adpYPhL',
+	  result_code: 'FAIL',
+	  return_code: 'SUCCESS',
+	  return_msg: 'OK',
+	  sign: 'A444E5B0DD44E0C8F996B887DA7FF74F' }
+
+	(5)退款查询已退款订单
+	{ appid: 'wx315ac5d37a858129',
+	  cash_fee: '1',
+	  mch_id: '1274134501',
+	  nonce_str: 'T5ljRwYYSHePS1gr',
+	  out_refund_no_0: '20180821665587',
+	  out_trade_no: '20180821665587',
+	  refund_account_0: 'REFUND_SOURCE_UNSETTLED_FUNDS',
+	  refund_channel_0: 'ORIGINAL',
+	  refund_count: '1',
+	  refund_fee: '1',
+	  refund_fee_0: '1',
+	  refund_id_0: '50000007722018082106052170678',
+	  refund_recv_accout_0: '支付用户的零钱',
+	  refund_status_0: 'SUCCESS',
+	  refund_success_time_0: '2018-08-21 17:07:33',
+	  result_code: 'SUCCESS',
+	  return_code: 'SUCCESS',
+	  return_msg: 'OK',
+	  sign: '45DFBBD2480F4BAB9C2CB14F545FFE6E',
+	  total_fee: '1',
+	  transaction_id: '4200000165201808217781847728' }
+
+	
+5.关闭订单
+	(1)关闭已支付订单
+	{ return_code: 'SUCCESS',
+	  return_msg: 'OK',
+	  appid: 'wx315ac5d37a858129',
+	  mch_id: '1274134501',
+	  sub_mch_id: '',
+	  nonce_str: 'ToUYs6kEENJWDHSy',
+	  sign: '86FDDF60087E456438DB13D346B45E96',
+	  result_code: 'FAIL',
+	  err_code: 'ORDERPAID',
+	  err_code_des: 'order paid' }
+
+	(2)关闭未支付订单
+	{ return_code: 'SUCCESS',
+	  return_msg: 'OK',
+	  appid: 'wx315ac5d37a858129',
+	  mch_id: '1274134501',
+	  sub_mch_id: '',
+	  nonce_str: 'JW2KzCW6L9AesWmP',
+	  sign: '552D75DBBD9C90339842358F49D55CE6',
+	  result_code: 'SUCCESS' }
+
+	(3)关闭已关闭订单
+	{ return_code: 'SUCCESS',
+	  return_msg: 'OK',
+	  appid: 'wx315ac5d37a858129',
+	  mch_id: '1274134501',
+	  sub_mch_id: '',
+	  nonce_str: 'hhBJwt12SXBjrDIn',
+	  sign: 'CFA0FF866AF90107D80C4ECBADB8FF6C',
+	  result_code: 'SUCCESS' }
+
+	(4)关闭不存在订单
+	{ return_code: 'SUCCESS',
+	  return_msg: 'OK',
+	  appid: 'wx315ac5d37a858129',
+	  mch_id: '1274134501',
+	  sub_mch_id: '',
+	  nonce_str: '5k38jgTwpXtRM7Xw',
+	  sign: 'DB1D7CA5D952CD6B6BDD6CB85D34BACB',
+	  result_code: 'SUCCESS' }
+
+	(5)关闭已退款订单
+	{ return_code: 'SUCCESS',
+	  return_msg: 'OK',
+	  appid: 'wx315ac5d37a858129',
+	  mch_id: '1274134501',
+	  sub_mch_id: '',
+	  nonce_str: 'jb5sXdowOzp3StOs',
+	  sign: 'F8344AD1D412983EEBAD979FAFFD437C',
+	  result_code: 'FAIL',
+	  err_code: 'ORDERPAID',
+	  err_code_des: 'order paid' }
+
+==================================================
+测试支付宝:
+20180821386906 未支付
+
+1.下单
+	(1)下单, 没有支付 --- payStatus:2 支付失败
+	(2)下单, 立即支付 --- payStatus:1 支付成功
+	(3)下单, 扫了码, 在轮询结束后, 再支付 --- 订单被关闭
+	
+2.查询
+	(1)查询已支付订单
+	 { code: '10000',
+	  msg: 'Success',
+	  buyer_logon_id: 'www***@qq.com',
+	  buyer_pay_amount: '0.00',
+	  buyer_user_id: '2088502347015634',
+	  invoice_amount: '0.00',
+	  out_trade_no: '20180821208563',
+	  point_amount: '0.00',
+	  receipt_amount: '0.00',
+	  send_pay_date: '2018-08-21 18:45:30',
+	  total_amount: '0.01',
+	  trade_no: '2018082121001004630573123999',
+	  trade_status: 'TRADE_SUCCESS' }
+	
+	(2)查询未支付订单
+	{ code: '10000',
+	  msg: 'Success',
+	  buyerLogonId: 'www***@qq.com',
+	  buyerPayAmount: '0.00',
+	  buyerUserId: '2088502347015634',
+	  invoiceAmount: '0.00',
+	  outTradeNo: '20180821386906',
+	  pointAmount: '0.00',
+	  receiptAmount: '0.00',
+	  totalAmount: '0.01',
+	  tradeNo: '2018082121001004630574256864',
+	  tradeStatus: 'WAIT_BUYER_PAY' }
+
+	(3)查询已关闭订单
+	{ code: '10000',
+	  msg: 'Success',
+	  buyer_logon_id: 'www***@qq.com',
+	  buyer_pay_amount: '0.00',
+	  buyer_user_id: '2088502347015634',
+	  invoice_amount: '0.00',
+	  out_trade_no: '20180821386906',
+	  point_amount: '0.00',
+	  receipt_amount: '0.00',
+	  total_amount: '0.01',
+	  trade_no: '2018082121001004630574256864',
+	  trade_status: 'TRADE_CLOSED' }
+	
+	(4)查询不存在订单
+	{ code: '40004',
+	  msg: 'Business Failed',
+	  sub_code: 'ACQ.TRADE_NOT_EXIST',
+	  sub_msg: '交易不存在',
+	  buyer_pay_amount: '0.00',
+	  invoice_amount: '0.00',
+	  out_trade_no: '20180821386906123',
+	  point_amount: '0.00',
+	  receipt_amount: '0.00' }
+	
+	(5)查询已退款订单
+	{ code: '10000',
+	  msg: 'Success',
+	  buyerLogonId: 'www***@qq.com',
+	  buyerPayAmount: '0.00',
+	  buyerUserId: '2088502347015634',
+	  invoiceAmount: '0.00',
+	  outTradeNo: '20180821959868',
+	  pointAmount: '0.00',
+	  receiptAmount: '0.00',
+	  sendPayDate: '2018-08-21 18:13:24',
+	  totalAmount: '0.01',
+	  tradeNo: '2018082121001004630573662426',
+	  tradeStatus: 'TRADE_CLOSED' }
+
+	
+3.退款
+	(1)退款已支付订单
+	{ code: '10000',
+	  msg: 'Success',
+	  buyer_logon_id: 'www***@qq.com',
+	  buyer_user_id: '2088502347015634',
+	  fund_change: 'Y',
+	  gmt_refund_pay: '2018-08-21 18:21:17',
+	  out_trade_no: '20180821959868',
+	  refund_fee: '0.01',
+	  send_back_fee: '0.00',
+	  trade_no: '2018082121001004630573662426' }
+
+	(2)退款未支付订单
+	{ code: '40004',
+	  msg: 'Business Failed',
+	  sub_code: 'ACQ.TRADE_STATUS_ERROR',
+	  sub_msg: '交易状态不合法',
+	  refund_fee: '0.00',
+	  send_back_fee: '0.00' }
+
+	(3)退款已关闭订单
+	{ code: '40004',
+	  msg: 'Business Failed',
+	  sub_code: 'ACQ.TRADE_HAS_CLOSE',
+	  sub_msg: '交易已经关闭',
+	  refund_fee: '0.00',
+	  send_back_fee: '0.00' }
+
+	(4)退款不存在订单
+	{ code: '40004',
+	  msg: 'Business Failed',
+	  sub_code: 'ACQ.TRADE_NOT_EXIST',
+	  sub_msg: '交易不存在',
+	  refund_fee: '0.00',
+	  send_back_fee: '0.00' }
+	
+	(5)退款已退款订单
+	{ code: '10000',
+	  msg: 'Success',
+	  buyer_logon_id: 'www***@qq.com',
+	  buyer_user_id: '2088502347015634',
+	  fund_change: 'N',
+	  gmt_refund_pay: '2018-08-21 18:21:17',
+	  out_trade_no: '20180821959868',
+	  refund_fee: '0.01',
+	  send_back_fee: '0.00',
+	  trade_no: '2018082121001004630573662426' }
+	  
+
+4.退款查询
+	(1)退款查询已支付订单
+	{ code: '10000', msg: 'Success' }
+	
+	(2)退款查询未支付订单
+	{ code: '10000', msg: 'Success' }
+
+
+	(3)退款查询已关闭订单
+	{ code: '10000', msg: 'Success' }
+
+
+	(4)退款查询不存在订单
+	{ code: '40004',
+	  msg: 'Business Failed',
+	  sub_code: 'ACQ.TRADE_NOT_EXIST',
+	  sub_msg: '交易不存在',
+	  out_trade_no: '20180821386906123' }
+
+	(5)退款查询已退款订单
+	{ code: '10000', msg: 'Success' }
+
+	
+5.关闭订单
+	(1)关闭已支付订单
+	{ code: '40004',
+	  msg: 'Business Failed',
+	  sub_code: 'ACQ.TRADE_STATUS_ERROR',
+	  sub_msg: '交易状态不合法',
+	  out_trade_no: '20180821208563' }
+
+
+	(2)关闭未支付订单
+	{ code: '10000',
+	  msg: 'Success',
+	  out_trade_no: '20180821386906',
+	  trade_no: '2018082121001004630574256864' }
+
+
+	(3)关闭已关闭订单
+	{ code: '40004',
+	  msg: 'Business Failed',
+	  sub_code: 'ACQ.TRADE_STATUS_ERROR',
+	  sub_msg: '交易状态不合法',
+	  out_trade_no: '20180821386906' }
+
+	(4)关闭不存在订单
+	{ code: '40004',
+	  msg: 'Business Failed',
+	  sub_code: 'ACQ.TRADE_NOT_EXIST',
+	  sub_msg: '交易不存在' }
+
+
+
+	(5)关闭已退款订单
+	{ code: '40004',
+	  msg: 'Business Failed',
+	  sub_code: 'ACQ.TRADE_STATUS_ERROR',
+	  sub_msg: '交易状态不合法',
+	  out_trade_no: '20180821959868' }
