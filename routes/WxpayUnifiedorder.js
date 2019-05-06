@@ -135,5 +135,3 @@ module.exports = async (fastify, options, next) => {
 
     next()
 };
-
-// module.exports = routes;

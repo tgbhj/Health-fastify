@@ -46,55 +46,6 @@ module.exports = async (fastify, options, next) => {
     next()
 };
 
-// module.exports = routes;
-
-// module.exports = class {
-//     async mountingRoute() {
-//         return {
-//             method: 'post',
-//             path: '/auth/alipay/query2.0',
-//             middleware: [middleware],
-//             needBeforeRoutes: false,
-//             needAfterRoutes: false,
-//         }
-//     }
-// };
-//
-// async function middleware(ctx, next) {
-//     try {
-//         let {outTradeNo} = ctx.request.body;
-//
-//         if (!alipayFactory.isType(outTradeNo)) {
-//             return ctx.body = {
-//                 status: 'fail',
-//                 description: 'outTradeNo is required'
-//             }
-//         }
-//
-//         let queryRes = await alipayFactory.createAlipaySdk().exec(
-//             alipayFactory.ALIPAY_API_MAPPING,
-//             {
-//                 bizContent: {
-//                     outTradeNo
-//                 }
-//             },
-//             {
-//                 validateSign: true // 验签
-//             }
-//         );
-//         console.log('[queryRes]', queryRes);
-//         return ctx.body = {
-//             status: 'success',
-//             description: queryRes
-//         }
-//     } catch (_err) {
-//         return ctx.body = {
-//             status: 'fail',
-//             description: `[PCAlipayTradeQuery _err]: ${_err}`
-//         }
-//     }
-// }
-
 // 成功
 // {
 //   "code": "10000",

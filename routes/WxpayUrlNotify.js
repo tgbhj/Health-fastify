@@ -34,17 +34,6 @@ module.exports = async (fastify, options, next) => {
                 })
             }
 
-            // 3.检查trade_status
-            // let tradeStatus = []
-            // !(postData['trade_status'] === 'TRADE_SUCCESS') && tradeStatus.push('fail')
-            // // !(postData['trade_status'] === 'TRADE_FINISH') && tradeStatus.push('fail')
-            // if (tradeStatus.length > 0) {
-            //   return ctx.body = {
-            //     status: 'fail',
-            //     description: '检查trade_status失败'
-            //   }
-            // }
-
             // 3.调用查询接口(trade_state来判断交易是否成功)
             wxpayFactory.setMethod('orderquery');
             let queryRes = await wxpayFactory.createWxpaySdk2().exec(
@@ -90,101 +79,6 @@ module.exports = async (fastify, options, next) => {
 
     next()
 };
-
-// module.exports = routes;
-
-// module.exports = class {
-//     async mountingRoute() {
-//         return {
-//             path: '/auth/wxpay/callback/notify/',
-//             method: 'post',
-//             middleware: [middleware],
-//             needBeforeRoutes: false,
-//             needAfterRoutes: false,
-//         }
-//     }
-// };
-//
-// async function middleware(ctx, next) {
-//     try {
-//         // 真实数据
-//         console.log('[微信支付post请求notifyUrl]');
-//         const postData = ctx.request.body;
-//         console.log('[postData]', postData, typeof postData);
-//
-//         // 1.验签
-//         let signRes = await wxpayFactory.createWxpaySdk2().checkNotifySign(postData);
-//         console.log('[signRes]', signRes);
-//         if (!signRes) {
-//             return ctx.body = {
-//                 status: 'fail',
-//                 description: '验签失败'
-//             }
-//         }
-//
-//         // 2.比对数据(outTradeNo, appId, totalAmount)
-//         let checkRes = await wxpayFactory.createWxpayDb().checkNotifyData(postData);
-//         console.log('[checkRes]', checkRes);
-//         if (!checkRes) {
-//             return ctx.body = {
-//                 status: 'fail',
-//                 description: '比对数据失败'
-//             }
-//         }
-//
-//         // 3.检查trade_status
-//         // let tradeStatus = []
-//         // !(postData['trade_status'] === 'TRADE_SUCCESS') && tradeStatus.push('fail')
-//         // // !(postData['trade_status'] === 'TRADE_FINISH') && tradeStatus.push('fail')
-//         // if (tradeStatus.length > 0) {
-//         //   return ctx.body = {
-//         //     status: 'fail',
-//         //     description: '检查trade_status失败'
-//         //   }
-//         // }
-//
-//         // 3.调用查询接口(trade_state来判断交易是否成功)
-//         wxpayFactory.setMethod('orderquery');
-//         let queryRes = await wxpayFactory.createWxpaySdk2().exec(
-//             wxpayFactory.WXPAY_API_MAPPING,
-//             {
-//                 outTradeNo: postData['out_trade_no']
-//             },
-//             {
-//                 validateSign: true
-//             }
-//         );
-//         console.log('[查询结果]', queryRes);
-//         console.log('[查询结果]', queryRes['tradeState']);
-//
-//         if (queryRes['tradeState'] !== 'SUCCESS') {
-//             return ctx.body = {
-//                 status: 'fail',
-//                 description: '检查trade_status失败'
-//             }
-//         }
-//
-//         // 4.业务处理, 修改订单状态
-//         const updateArr = ['bank_type', 'fee_type', 'nonce_str', 'openid', 'time_end', 'total_fee', 'transaction_id'];
-//         const conditionArr = ['out_trade_no', 'total_fee'];
-//         const payStatus = 1;
-//         let updateRes = await wxpayFactory.createWxpayDb().upDateOrderStatus(postData, updateArr, conditionArr, {payStatus});
-//         console.log('[updateRes]', updateRes);
-//         if (!updateRes) {
-//             return ctx.body = {
-//                 status: 'fail',
-//                 description: '业务处理, 更新订单异步返回信息失败'
-//             }
-//         }
-//
-//         return ctx.body = 'success'
-//     } catch (_err) {
-//         return ctx.body = {
-//             status: 'fail',
-//             description: `[异步回调 err]: ${_err}`
-//         }
-//     }
-// }
 
 // [postData] { appid: 'wx315ac5d37a858129',
 //   bank_type: 'CFT',
