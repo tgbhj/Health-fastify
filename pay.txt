@@ -85,8 +85,7 @@
 	  trade_state: 'REFUND',
 	  cash_fee: '1',
 	  trade_state_desc: '订单发生过退款，退款详情请查询退款单' }
-	
-	
+
 3.退款
 	(1)退款已支付订单
 	{ return_code: 'SUCCESS',
@@ -118,6 +117,7 @@
 	  result_code: 'FAIL',
 	  err_code: 'ORDERNOTEXIST',
 	  err_code_des: '订单不存在' }
+
 	(3)退款已关闭订单
 	{ return_code: 'SUCCESS',
 	  return_msg: 'OK',
@@ -138,7 +138,8 @@
 	  sign: 'EBF22C679FF39C06CA4C333024509A8D',
 	  result_code: 'FAIL',
 	  err_code: 'ORDERNOTEXIST',
-	  err_code_des: '订单不存在' }	
+	  err_code_des: '订单不存在' }
+
 	(5)退款已退款订单
 	{ returnCode: 'SUCCESS',
 	  returnMsg: 'OK',
@@ -158,8 +159,6 @@
 	  cashFee: '1',
 	  couponRefundCount: '0',
 	  cashRefundFee: '1' }
-
-
 
 4.退款查询
 	(1)退款查询已支付订单
@@ -228,7 +227,6 @@
 	  sign: '45DFBBD2480F4BAB9C2CB14F545FFE6E',
 	  total_fee: '1',
 	  transaction_id: '4200000165201808217781847728' }
-
 	
 5.关闭订单
 	(1)关闭已支付订单
@@ -363,7 +361,6 @@
 	  totalAmount: '0.01',
 	  tradeNo: '2018082121001004630573662426',
 	  tradeStatus: 'TRADE_CLOSED' }
-
 	
 3.退款
 	(1)退款已支付订单
@@ -413,7 +410,6 @@
 	  refund_fee: '0.01',
 	  send_back_fee: '0.00',
 	  trade_no: '2018082121001004630573662426' }
-	  
 
 4.退款查询
 	(1)退款查询已支付订单
@@ -422,10 +418,8 @@
 	(2)退款查询未支付订单
 	{ code: '10000', msg: 'Success' }
 
-
 	(3)退款查询已关闭订单
 	{ code: '10000', msg: 'Success' }
-
 
 	(4)退款查询不存在订单
 	{ code: '40004',
@@ -436,7 +430,6 @@
 
 	(5)退款查询已退款订单
 	{ code: '10000', msg: 'Success' }
-
 	
 5.关闭订单
 	(1)关闭已支付订单
@@ -446,13 +439,11 @@
 	  sub_msg: '交易状态不合法',
 	  out_trade_no: '20180821208563' }
 
-
 	(2)关闭未支付订单
 	{ code: '10000',
 	  msg: 'Success',
 	  out_trade_no: '20180821386906',
 	  trade_no: '2018082121001004630574256864' }
-
 
 	(3)关闭已关闭订单
 	{ code: '40004',
@@ -466,8 +457,6 @@
 	  msg: 'Business Failed',
 	  sub_code: 'ACQ.TRADE_NOT_EXIST',
 	  sub_msg: '交易不存在' }
-
-
 
 	(5)关闭已退款订单
 	{ code: '40004',
