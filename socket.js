@@ -1,4 +1,4 @@
-const {} = require('./config/config');
+// const {} = require('./config/config');
 const io = require('socket.io')();
 
 io.on('connection', socket => {
