@@ -9,7 +9,7 @@ async function getInfos(req, reply) {
             reply.send({
                 code: 20000,
                 msg: 'Success',
-                err: 'null',
+                err: 'Null',
                 cb: cb
             })
         }, err => {
@@ -29,7 +29,7 @@ async function getInfo(req, reply) {
             reply.send({
                 code: 20000,
                 msg: 'Success',
-                err: 'null',
+                err: 'Null',
                 cb: cb
             })
         }, err => {
@@ -49,7 +49,7 @@ async function setCollect(req, reply) {
             reply.send({
                 code: 20000,
                 msg: 'Success',
-                err: 'null',
+                err: 'Null',
                 cb: cb
             })
         }, err => {
@@ -69,7 +69,7 @@ async function delCollect(req, reply) {
             reply.send({
                 code: 20000,
                 msg: 'Success',
-                err: 'null',
+                err: 'Null',
                 cb: cb
             })
         }, err => {
@@ -89,7 +89,7 @@ async function setLike(req, reply) {
             reply.send({
                 code: 20000,
                 msg: 'Success',
-                err: 'null',
+                err: 'Null',
                 cb: cb
             })
         }, err => {
@@ -109,7 +109,7 @@ async function delLike(req, reply) {
             reply.send({
                 code: 20000,
                 msg: 'Success',
-                err: 'null',
+                err: 'Null',
                 cb: cb
             })
         }, err => {
@@ -130,7 +130,7 @@ async function getMed(req, reply) {
             reply.send({
                 code: 20000,
                 msg: 'Success',
-                err: 'null',
+                err: 'Null',
                 cb: cb
             })
         }, err => {

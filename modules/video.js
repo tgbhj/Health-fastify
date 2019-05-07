@@ -13,7 +13,7 @@ async function getVideos(req, reply) {
             reply.send({
                 code: 20000,
                 msg: 'Success',
-                err: 'null',
+                err: 'Null',
                 cb: cb
             })
         }, err => {
@@ -33,7 +33,7 @@ async function getVideo(req, reply) {
             reply.send({
                 code: 20000,
                 msg: 'Success',
-                err: 'null',
+                err: 'Null',
                 cb: cb
             })
         }, err => {
@@ -58,7 +58,7 @@ async function saveVideo(req, reply, video) {
             reply.send({
                 code: 20000,
                 msg: 'Success',
-                err: 'null',
+                err: 'Null',
                 cb: cb
             })
         } else {
@@ -79,7 +79,7 @@ async function videoDel(req, reply) {
             reply.send({
                 code: 20000,
                 msg: 'Success',
-                err: 'null',
+                err: 'Null',
                 cb: {}
             })
         }, err => {
@@ -105,7 +105,7 @@ async function uploadVideo(req, reply) {
             reply.send({
                 code: 20000,
                 msg: 'Success',
-                err: 'null',
+                err: 'Null',
                 cb: {}
             });
         }

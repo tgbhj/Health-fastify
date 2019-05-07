@@ -12,7 +12,7 @@ async function getQuestions(req, reply) {
             reply.send({
                 code: 20000,
                 msg: 'Success',
-                err: 'null',
+                err: 'Null',
                 cb: cb
             })
         }, err => {
@@ -33,7 +33,7 @@ async function getQuestion(req, reply) {
             reply.send({
                 code: 20000,
                 msg: 'Success',
-                err: 'null',
+                err: 'Null',
                 cb: cb
             })
         }, err => {
@@ -56,7 +56,7 @@ async function questionHistory(req, reply) {
                         reply.send({
                             code: 20000,
                             msg: 'Success',
-                            err: 'null',
+                            err: 'Null',
                             cb: cb
                         })
                     }, err => {
@@ -78,7 +78,7 @@ async function questionHistory(req, reply) {
                                     reply.send({
                                         code: 20000,
                                         msg: 'Success',
-                                        err: 'null',
+                                        err: 'Null',
                                         cb: cb
                                     })
                                 }, err => {
@@ -109,7 +109,7 @@ async function questionHistory(req, reply) {
             reply.send({
                 code: 50006,
                 msg: 'token过期',
-                err: 'null',
+                err: 'Null',
                 cb: {}
             })
         }
@@ -128,7 +128,7 @@ async function postQuestion(req, reply) {
                     reply.send({
                         code: 20000,
                         msg: 'Success',
-                        err: 'null',
+                        err: 'Null',
                         cb: cb
                     })
                 } else {
@@ -144,7 +144,7 @@ async function postQuestion(req, reply) {
             reply.send({
                 code: 50006,
                 msg: 'Token过期',
-                err: 'null',
+                err: 'Null',
                 cb: {}
             })
         }
@@ -168,7 +168,7 @@ async function consult(req, reply) {
                     reply.send({
                         code: 20000,
                         msg: 'Success',
-                        err: 'null',
+                        err: 'Null',
                         cb: cb
                     })
                 } else {
@@ -184,7 +184,7 @@ async function consult(req, reply) {
             reply.send({
                 code: 50006,
                 msg: 'Token过期',
-                err: 'null',
+                err: 'Null',
                 cb: {}
             })
         }
@@ -206,7 +206,7 @@ async function answer(req, reply) {
                     reply.send({
                         code: 20000,
                         msg: 'Success',
-                        err: 'null',
+                        err: 'Null',
                         cb: {}
                     })
                 }, err => {
@@ -221,7 +221,7 @@ async function answer(req, reply) {
             reply.send({
                 code: 50006,
                 msg: 'Token过期',
-                err: 'null',
+                err: 'Null',
                 cb: {}
             })
         }
@@ -239,7 +239,7 @@ async function docAnswer(req, reply) {
                         reply.send({
                             code: 20000,
                             msg: 'Success',
-                            err: 'null',
+                            err: 'Null',
                             cb: cb
                         })
                     }, err => {
@@ -254,7 +254,7 @@ async function docAnswer(req, reply) {
                 reply.send({
                     code: 50009,
                     msg: '该医生不存在',
-                    err: 'null',
+                    err: 'Null',
                     cb: {}
                 })
             }
@@ -262,7 +262,7 @@ async function docAnswer(req, reply) {
             reply.send({
                 code: 50006,
                 msg: 'Token过期',
-                err: 'null',
+                err: 'Null',
                 cb: {}
             })
         }
@@ -285,7 +285,7 @@ async function accept(req, reply) {
             reply.send({
                 code: 20000,
                 msg: 'Success',
-                err: 'null',
+                err: 'Null',
                 cb: cb
             })
         }, err => {

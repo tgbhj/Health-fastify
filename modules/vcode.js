@@ -13,7 +13,7 @@ async function getVCode(req, reply) {
                     reply.send({
                         code: 20000,
                         msg: 'Success',
-                        err: 'null',
+                        err: 'Null',
                         vcode: cb.vcode
                     })
                 } else {
@@ -55,7 +55,7 @@ async function stp(req, reply, vcode) {
         reply.send({
             code: 20000,
             msg: 'Success',
-            err: 'null',
+            err: 'Null',
             cb: JSON.parse(res.data)
         })
     }).catch(error => {

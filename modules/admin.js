@@ -82,7 +82,7 @@ async function editType(req, reply) {
             reply.send({
                 code: 20000,
                 msg: 'Success',
-                err: 'null',
+                err: 'Null',
                 cb: {}
             })
         }, err => {

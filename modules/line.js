@@ -7,7 +7,7 @@ async function getLines(req, reply) {
             reply.send({
                 code: 20000,
                 msg: 'Success',
-                err: 'null',
+                err: 'Null',
                 cb: cb
             })
         }, err => {

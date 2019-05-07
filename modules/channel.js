@@ -10,7 +10,7 @@ async function getChannels(req, reply) {
             reply.send({
                 code: 20000,
                 msg: 'Success',
-                err: 'null',
+                err: 'Null',
                 cb: cb
             })
         }, err => {
@@ -30,7 +30,7 @@ async function getChannel(req, reply) {
             reply.send({
                 code: 20000,
                 msg: 'Success',
-                err: 'null',
+                err: 'Null',
                 cb: cb
             })
         }, err => {
@@ -58,7 +58,7 @@ async function createChannel(req, reply) {
                                     reply.send({
                                         code: 20000,
                                         msg: 'Success',
-                                        err: 'null',
+                                        err: 'Null',
                                         cb: cb
                                     })
                                 }, err => {
@@ -73,7 +73,7 @@ async function createChannel(req, reply) {
                             reply.send({
                                 code: 50000,
                                 msg: 'UnKnow-Error',
-                                err: 'null',
+                                err: 'Null',
                                 cb: {}
                             })
                         }
@@ -82,7 +82,7 @@ async function createChannel(req, reply) {
                     reply.send({
                         code: 50008,
                         msg: '直播间已存在',
-                        err: 'null',
+                        err: 'Null',
                         cb: {}
                     })
                 }
@@ -98,7 +98,7 @@ async function createChannel(req, reply) {
             reply.send({
                 code: 50006,
                 msg: 'token过期',
-                err: 'null',
+                err: 'Null',
                 cb: {}
             })
         }
@@ -127,7 +127,7 @@ async function modifyChannel(req, reply) {
                     reply.send({
                         code: 20000,
                         msg: 'Success',
-                        err: 'null',
+                        err: 'Null',
                         cb: cb
                     })
                 }, err => {
@@ -152,7 +152,7 @@ async function channelDel(req, reply) {
                     reply.send({
                         code: 20000,
                         msg: 'Success',
-                        err: 'null',
+                        err: 'Null',
                         cb: cb
                     })
                 }, err => {
@@ -176,14 +176,14 @@ async function userChannel(req, reply) {
                         reply.send({
                             code: 20001,
                             msg: '直播间不存在',
-                            err: 'null',
+                            err: 'Null',
                             cb: {}
                         })
                     } else {
                         reply.send({
                             code: 20002,
                             msg: '直播间已存在',
-                            err: 'null',
+                            err: 'Null',
                             cb: hhlChannel
                         })
                     }

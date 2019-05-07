@@ -52,7 +52,7 @@ async function reg(req, reply) {
                             reply.send({
                                 code: 50001,
                                 msg: '手机已注册',
-                                err: 'null',
+                                err: 'Null',
                                 cb: {}
                             })
                         } else if (cb.phone !== req.body.phone) {
@@ -73,14 +73,14 @@ async function reg(req, reply) {
             reply.send({
                 code: 50002,
                 msg: '验证码错误',
-                err: 'null',
+                err: 'Null',
                 cb: {}
             })
         } else {
             reply.send({
                 code: 50000,
                 msg: 'UnKnow-Error',
-                err: 'null',
+                err: 'Null',
                 cb: {}
             })
         }
@@ -88,14 +88,14 @@ async function reg(req, reply) {
         reply.send({
             code: 50003,
             msg: '验证码不存在或过期',
-            err: 'null',
+            err: 'Null',
             cb: {}
         })
     } else {
         reply.send({
             code: 50000,
             msg: 'UnKnow-Error',
-            err: 'null',
+            err: 'Null',
             cb: {}
         })
     }
@@ -118,7 +118,7 @@ async function regByPhone(req, reply) {
             reply.send({
                 code: 20000,
                 msg: 'Success',
-                err: 'null',
+                err: 'Null',
                 cb: {
                     token: cb.token.content
                 }
@@ -144,7 +144,7 @@ async function signByPass(req, reply) {
         reply.send({
             code: 20000,
             msg: 'Success',
-            err: 'null',
+            err: 'Null',
             cb: {
                 token: user.token.content,
                 type: user.type
@@ -154,7 +154,7 @@ async function signByPass(req, reply) {
         reply.send({
             code: 50004,
             msg: "账号或密码错误",
-            err: 'null',
+            err: 'Null',
             cb: {}
         })
     }
@@ -167,7 +167,7 @@ async function getUsers(req, reply) {
             reply.send({
                 code: 20000,
                 msg: 'Success',
-                err: 'null',
+                err: 'Null',
                 cb: cb
             })
         }, err => {
@@ -186,14 +186,14 @@ async function getUser(req, reply) {
             reply.send({
                 code: 20000,
                 msg: 'Success',
-                err: 'null',
+                err: 'Null',
                 cb: user[0]
             })
         } else {
             reply.send({
                 code: 50006,
                 msg: 'Token过期',
-                err: 'null',
+                err: 'Null',
                 cb: {}
             })
         }
@@ -213,7 +213,7 @@ async function fp_step1(req, reply) {
         reply.send({
             code: 50003,
             msg: '验证码不存在或过期',
-            err: 'null',
+            err: 'Null',
             cb: {}
         })
     } else {
@@ -226,14 +226,14 @@ async function fp_step1(req, reply) {
                         reply.send({
                             code: 20000,
                             msg: 'Success',
-                            err: 'null',
+                            err: 'Null',
                             cb: {}
                         })
                     } else {
                         reply.send({
                             code: 50007,
                             msg: '此号码未注册',
-                            err: 'null',
+                            err: 'Null',
                             cb: {}
                         })
                     }
@@ -249,7 +249,7 @@ async function fp_step1(req, reply) {
             reply.send({
                 code: 50002,
                 msg: '验证码错误',
-                err: 'null',
+                err: 'Null',
                 cb: {}
             })
         }
@@ -264,7 +264,7 @@ async function fp_step2(req, reply) {
             reply.send({
                 code: 20000,
                 msg: 'Success',
-                err: 'null',
+                err: 'Null',
                 cb: cb
             })
         }, err => {
@@ -286,7 +286,7 @@ async function getPolicy(req, reply) {
                     reply.send({
                         code: 20000,
                         msg: 'Success',
-                        err: 'null',
+                        err: 'Null',
                         cb: cb
                     })
                 }, err => {
@@ -301,7 +301,7 @@ async function getPolicy(req, reply) {
             reply.send({
                 code: 50006,
                 msg: 'token过期',
-                err: 'null',
+                err: 'Null',
                 cb: {}
             })
         }
@@ -323,7 +323,7 @@ async function getUserCollect(req, reply) {
             reply.send({
                 code: 20000,
                 msg: 'Success',
-                err: 'null',
+                err: 'Null',
                 cb: cb
             })
         }, err => {
@@ -343,7 +343,7 @@ async function userCollect(req, reply) {
             reply.send({
                 code: 20000,
                 msg: 'Success',
-                err: 'null',
+                err: 'Null',
                 cb: cb
             })
         }, err => {
@@ -363,7 +363,7 @@ async function delUserCollect(req, reply) {
             reply.send({
                 code: 20000,
                 msg: 'Success',
-                err: 'null',
+                err: 'Null',
                 cb: cb
             })
         }, err => {
@@ -383,7 +383,7 @@ async function userLike(req, reply) {
             reply.send({
                 code: 20000,
                 msg: 'Success',
-                err: 'null',
+                err: 'Null',
                 cb: cb
             })
         }, err => {
@@ -403,7 +403,7 @@ async function delUserLike(req, reply) {
             reply.send({
                 code: 20000,
                 msg: 'Success',
-                err: 'null',
+                err: 'Null',
                 cb: cb
             })
         }, err => {
@@ -423,7 +423,7 @@ async function edit(req, reply) {
             reply.send({
                 code: 20000,
                 msg: 'Success',
-                err: 'null',
+                err: 'Null',
                 cb: {}
             })
         }, err => {
@@ -450,7 +450,7 @@ async function uploadFace(req, reply) {
             reply.send({
                 code: 20000,
                 msg: 'Success',
-                err: 'null',
+                err: 'Null',
                 cb: {}
             })
         }
@@ -470,7 +470,7 @@ async function saveFace(req, reply) {
             reply.send({
                 code: 20000,
                 msg: 'Success',
-                err: 'null',
+                err: 'Null',
                 cb: {}
             })
         }, err => {

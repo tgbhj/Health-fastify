@@ -46,7 +46,7 @@ module.exports = async (fastify, options, next) => {
                         reply.send({
                             code: 20000,
                             msg: 'Success',
-                            err: 'null',
+                            err: 'Null',
                             collection: collection,
                             cb: cb
                         })
@@ -66,7 +66,7 @@ module.exports = async (fastify, options, next) => {
                         reply.send({
                             code: 20000,
                             msg: 'Success',
-                            err: 'null',
+                            err: 'Null',
                             collection: collection,
                             cb: cb
                         })
@@ -88,7 +88,7 @@ module.exports = async (fastify, options, next) => {
                             reply.send({
                                 code: 20000,
                                 msg: 'Success',
-                                err: 'null',
+                                err: 'Null',
                                 collection: collection,
                                 cb: cb
                             })
@@ -96,7 +96,7 @@ module.exports = async (fastify, options, next) => {
                             reply.send({
                                 code: 50006,
                                 msg: 'Token过期',
-                                err: 'null',
+                                err: 'Null',
                                 collection: collection,
                                 cb: {}
                             })
@@ -119,7 +119,7 @@ module.exports = async (fastify, options, next) => {
                             reply.send({
                                 code: 50014,
                                 msg: '没有用户',
-                                err: 'null',
+                                err: 'Null',
                                 collection: collection,
                                 cb: {}
                             })
@@ -127,7 +127,7 @@ module.exports = async (fastify, options, next) => {
                             reply.send({
                                 code: 20000,
                                 msg: 'Success',
-                                err: 'null',
+                                err: 'Null',
                                 collection: collection,
                                 cb: cb
                             })
@@ -150,7 +150,7 @@ module.exports = async (fastify, options, next) => {
                         reply.send({
                             code: 20000,
                             msg: 'Success',
-                            err: 'null',
+                            err: 'Null',
                             collection: collection,
                             cb: cb
                         })
@@ -173,7 +173,7 @@ module.exports = async (fastify, options, next) => {
                             reply.send({
                                 code: 50016,
                                 msg: '没有视频',
-                                err: 'null',
+                                err: 'Null',
                                 collection: collection,
                                 cb: {}
                             })
@@ -181,7 +181,7 @@ module.exports = async (fastify, options, next) => {
                             reply.send({
                                 code: 20000,
                                 msg: 'Success',
-                                err: 'null',
+                                err: 'Null',
                                 collection: collection,
                                 cb: cb
                             })
@@ -204,7 +204,7 @@ module.exports = async (fastify, options, next) => {
                         reply.send({
                             code: 20000,
                             msg: 'Success',
-                            err: 'null',
+                            err: 'Null',
                             collection: collection,
                             cb: cb
                         })
@@ -225,7 +225,7 @@ module.exports = async (fastify, options, next) => {
                             reply.send({
                                 code: 50018,
                                 msg: '没有频道',
-                                err: 'null',
+                                err: 'Null',
                                 collection: collection,
                                 cb: {}
                             })
@@ -233,7 +233,7 @@ module.exports = async (fastify, options, next) => {
                             reply.send({
                                 code: 20000,
                                 msg: 'Success',
-                                err: 'null',
+                                err: 'Null',
                                 collection: collection,
                                 cb: cb
                             })
@@ -256,7 +256,7 @@ module.exports = async (fastify, options, next) => {
                             reply.send({
                                 code: 50018,
                                 msg: '没有频道',
-                                err: 'null',
+                                err: 'Null',
                                 collection: collection,
                                 cb: {}
                             })
@@ -264,7 +264,7 @@ module.exports = async (fastify, options, next) => {
                             reply.send({
                                 code: 20000,
                                 msg: 'Success',
-                                err: 'null',
+                                err: 'Null',
                                 collection: collection,
                                 cb: cb
                             })
@@ -287,7 +287,7 @@ module.exports = async (fastify, options, next) => {
                         reply.send({
                             code: 20000,
                             msg: 'Success',
-                            err: 'null',
+                            err: 'Null',
                             collection: collection,
                             cb: cb
                         })
@@ -308,7 +308,7 @@ module.exports = async (fastify, options, next) => {
                             reply.send({
                                 code: 50020,
                                 msg: '没有医生',
-                                err: 'null',
+                                err: 'Null',
                                 collection: collection,
                                 cb: {}
                             })
@@ -316,7 +316,7 @@ module.exports = async (fastify, options, next) => {
                             reply.send({
                                 code: 20000,
                                 msg: 'Success',
-                                err: 'null',
+                                err: 'Null',
                                 collection: collection,
                                 cb: cb
                             })
@@ -338,7 +338,7 @@ module.exports = async (fastify, options, next) => {
                             reply.send({
                                 code: 50020,
                                 msg: '没有医生',
-                                err: 'null',
+                                err: 'Null',
                                 collection: collection,
                                 cb: {}
                             })
@@ -346,7 +346,7 @@ module.exports = async (fastify, options, next) => {
                             reply.send({
                                 code: 20000,
                                 msg: 'Success',
-                                err: 'null',
+                                err: 'Null',
                                 collection: collection,
                                 cb: cb
                             })
@@ -369,7 +369,7 @@ module.exports = async (fastify, options, next) => {
                         reply.send({
                             code: 20000,
                             msg: 'Success',
-                            err: 'null',
+                            err: 'Null',
                             collection: collection,
                             cb: cb
                         })
@@ -391,7 +391,7 @@ module.exports = async (fastify, options, next) => {
                             reply.send({
                                 code: 50022,
                                 msg: '没有线路',
-                                err: 'null',
+                                err: 'Null',
                                 collection: collection,
                                 cb: {}
                             })
@@ -399,7 +399,7 @@ module.exports = async (fastify, options, next) => {
                             reply.send({
                                 code: 20000,
                                 msg: 'Success',
-                                err: 'null',
+                                err: 'Null',
                                 collection: collection,
                                 cb: cb
                             })
@@ -422,7 +422,7 @@ module.exports = async (fastify, options, next) => {
                         reply.send({
                             code: 20000,
                             msg: 'Success',
-                            err: 'null',
+                            err: 'Null',
                             collection: collection,
                             cb: cb
                         })
@@ -444,7 +444,7 @@ module.exports = async (fastify, options, next) => {
                             reply.send({
                                 code: 50024,
                                 msg: '没有信息',
-                                err: 'null',
+                                err: 'Null',
                                 collection: collection,
                                 cb: {}
                             })
@@ -452,7 +452,7 @@ module.exports = async (fastify, options, next) => {
                             reply.send({
                                 code: 20000,
                                 msg: 'Success',
-                                err: 'null',
+                                err: 'Null',
                                 collection: collection,
                                 cb: cb
                             })
@@ -475,7 +475,7 @@ module.exports = async (fastify, options, next) => {
                         reply.send({
                             code: 20000,
                             msg: 'Success',
-                            err: 'null',
+                            err: 'Null',
                             collection: collection,
                             cb: cb
                         })
@@ -496,7 +496,7 @@ module.exports = async (fastify, options, next) => {
                             reply.send({
                                 code: 50026,
                                 msg: '没有用户提问',
-                                err: 'null',
+                                err: 'Null',
                                 collection: collection,
                                 cb: {}
                             })
@@ -504,7 +504,7 @@ module.exports = async (fastify, options, next) => {
                             reply.send({
                                 code: 20000,
                                 msg: 'Success',
-                                err: 'null',
+                                err: 'Null',
                                 collection: collection,
                                 cb: cb
                             })
@@ -526,7 +526,7 @@ module.exports = async (fastify, options, next) => {
                             reply.send({
                                 code: 50026,
                                 msg: '没有用户提问',
-                                err: 'null',
+                                err: 'Null',
                                 collection: collection,
                                 cb: {}
                             })
@@ -534,7 +534,7 @@ module.exports = async (fastify, options, next) => {
                             reply.send({
                                 code: 20000,
                                 msg: 'Success',
-                                err: 'null',
+                                err: 'Null',
                                 collection: collection,
                                 cb: cb
                             })
@@ -557,7 +557,7 @@ module.exports = async (fastify, options, next) => {
                         reply.send({
                             code: 20000,
                             msg: 'Success',
-                            err: 'null',
+                            err: 'Null',
                             collection: collection,
                             cb: cb
                         })
@@ -579,7 +579,7 @@ module.exports = async (fastify, options, next) => {
                             reply.send({
                                 code: 50028,
                                 msg: '没有处方药',
-                                err: 'null',
+                                err: 'Null',
                                 collection: collection,
                                 cb: {}
                             })
@@ -587,7 +587,7 @@ module.exports = async (fastify, options, next) => {
                             reply.send({
                                 code: 20000,
                                 msg: 'Success',
-                                err: 'null',
+                                err: 'Null',
                                 collection: collection,
                                 cb: cb
                             })
@@ -610,7 +610,7 @@ module.exports = async (fastify, options, next) => {
                         reply.send({
                             code: 20000,
                             msg: 'Success',
-                            err: 'null',
+                            err: 'Null',
                             collection: collection,
                             cb: cb
                         })
@@ -632,7 +632,7 @@ module.exports = async (fastify, options, next) => {
                             reply.send({
                                 code: 50030,
                                 msg: '没有保险产品',
-                                err: 'null',
+                                err: 'Null',
                                 collection: collection,
                                 cb: cb
                             })
@@ -640,7 +640,7 @@ module.exports = async (fastify, options, next) => {
                             reply.send({
                                 code: 20000,
                                 msg: 'Success',
-                                err: 'null',
+                                err: 'Null',
                                 collection: collection,
                                 cb: cb
                             })
