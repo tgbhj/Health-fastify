@@ -110,7 +110,7 @@ class TWeixinPayAPI extends TBase {
         return Object.assign({}, await this._parseXML(reqCb),
             {
                 out_trade_no: this.params['out_trade_no'],
-                out_refund_no,
+                out_refund_no
             })
     }
 
@@ -262,7 +262,7 @@ class TWeixinPayAPI extends TBase {
                 XML_FORMAT_ERROR: 'XML格式错误',
                 REQUIRE_POST_METHOD: '请使用post方法',
                 POST_DATA_EMPTY: 'post数据为空',
-                NOT_UTF8: '编码格式错误',
+                NOT_UTF8: '编码格式错误'
             },
             orderquery: {  // 查询订单
                 ORDERNOTEXIST: '此交易订单号不存在',
@@ -284,7 +284,7 @@ class TWeixinPayAPI extends TBase {
                 REQUIRE_POST_METHOD: '请使用post方法',
                 SIGNERROR: '签名错误',
                 XML_FORMAT_ERROR: 'XML格式错误',
-                FREQUENCY_LIMITED: '频率限制',
+                FREQUENCY_LIMITED: '频率限制'
             },
             refundquery: { // 查询退款订单
                 SYSTEMERROR: '接口返回错误',
@@ -295,7 +295,7 @@ class TWeixinPayAPI extends TBase {
                 MCHID_NOT_EXIST: 'MCHID不存在',
                 REQUIRE_POST_METHOD: '请使用post方法',
                 SIGNERROR: '签名错误',
-                XML_FORMAT_ERROR: 'XML格式错误',
+                XML_FORMAT_ERROR: 'XML格式错误'
             },
             closeorder: { // 关闭订单
                 ORDERPAID: '订单已支付',
@@ -303,7 +303,7 @@ class TWeixinPayAPI extends TBase {
                 ORDERCLOSED: '订单已关闭',
                 SIGNERROR: '签名错误',
                 REQUIRE_POST_METHOD: '请使用post方法',
-                XML_FORMAT_ERROR: 'XML格式错误',
+                XML_FORMAT_ERROR: 'XML格式错误'
             }
         };
 

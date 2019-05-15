@@ -21,7 +21,7 @@ function sign(method, params = {}, config) {
         charset: config.charset,
         signType: config.signType,
         version: config.version,
-        timestamp: moment().format('YYYY-MM-DD HH:mm:ss'),
+        timestamp: moment().format('YYYY-MM-DD HH:mm:ss')
     }, params);
     // 将bizContent中的内容 1.转成下划线 2.转成字符串
     if (bizContent) {

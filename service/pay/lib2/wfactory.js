@@ -42,7 +42,7 @@ class WxpaySdkFactory {
             'refund': 'https://api.mch.weixin.qq.com/secapi/pay/refund',
             'downloadbill': 'https://api.mch.weixin.qq.com/pay/downloadbill',
             'downloadfundflow': 'https://api.mch.weixin.qq.com/pay/downloadfundflow',
-            'refundquery': 'https://api.mch.weixin.qq.com/pay/refundquery',
+            'refundquery': 'https://api.mch.weixin.qq.com/pay/refundquery'
         };
         this.method = config.method || 'unifiedorder'
     }

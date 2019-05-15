@@ -33,7 +33,7 @@ exports.queryOrder = async function () {
       outTradeNo: JSON.parse(jobJson['data'])['out_trade_no'],
       type: jobJson['type'],
       maxAttempts: jobJson['max_attempts'],
-      attempts: jobJson['attempts'],
+      attempts: jobJson['attempts']
     };
 
     // p2

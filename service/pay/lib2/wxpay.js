@@ -32,8 +32,7 @@ class WxpaySdk {
             // tradeType: 'NATIVE',
             timeout: 5000,
             camelcase: true,
-            charset: 'utf-8',
-
+            charset: 'utf-8'
         }, camelCaseKeys(config, {deep: true}));
         this.sdkVersion = `wxpay-sdk-nodejs-${pkg.version}`;
         this.builder = new xml2js.Builder({rootName: 'xml'});
