@@ -27,7 +27,7 @@ const alipaySchema = mongoose.Schema({
     buyer_user_id: String, // 买家在支付宝的用户id
     fund_change: String, // 本次退款是否发生了资金变化
     gmt_refund_pay: String, // 退款支付时间 2014-11-27 15:45:57
-    refund_fee: String, // 退款总金额
+    refund_fee: String // 退款总金额
 });
 
 const alipay = mongoose.model("alipay", alipaySchema);
