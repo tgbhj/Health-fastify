@@ -14,7 +14,7 @@
     "blueimp-md5": "^2.10.0",
     "camelcase-keys": "^5.2.0",
     "fastify": "^2.3.0",
-    "fastify-multipart": "^0.8.1",
+    "fastify-multipart": "^0.8.2",
     "fluent-ffmpeg": "^2.1.2",
     "fxqueue": "^1.0.1",
     "iconv-lite": "^0.4.24",
