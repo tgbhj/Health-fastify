@@ -33,7 +33,7 @@ db.then(() => {
 // });
 
 fastify.use(serveStatic(path.resolve(__dirname, 'public')));
-fastify.use(serveStatic(path.resolve(__dirname, 'build'), {extensions: ['html']}));
+fastify.use(serveStatic(path.resolve(__dirname, 'build')));
 
 const Router = {
     route: (fastify, routers, prefix = '') => {
