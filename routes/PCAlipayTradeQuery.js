@@ -7,7 +7,7 @@
 const AlipayFactory = require('../service/pay/lib2/factory');
 const alipayFactory = new AlipayFactory({method: 'query'});
 
-module.exports = async (fastify, options, next) => {
+module.exports = async fastify => {
     fastify.post('/alipay/query', async (req, reply) => {
         try {
             let {outTradeNo} = req.body;
@@ -43,7 +43,6 @@ module.exports = async (fastify, options, next) => {
         }
     });
 
-    next()
 };
 
 // 成功

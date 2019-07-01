@@ -10,7 +10,7 @@ const QRCode = require('qrcode');
 const WxpaySdkFactory = require('../service/pay/lib2/wfactory');
 const moment = require("moment");
 
-module.exports = async (fastify, options, next) => {
+module.exports = async fastify => {
     const createQR = async (qr_url) => {
         try {
             return await QRCode.toDataURL(qr_url)
@@ -133,5 +133,4 @@ module.exports = async (fastify, options, next) => {
         }
     });
 
-    next()
 };

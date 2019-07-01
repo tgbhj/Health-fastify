@@ -5,7 +5,7 @@ const AlipayDb = require("../service/pay/lib2/db");
 const AlipayFactory = require('../service/pay/lib2/factory');
 const alipayFactory = new AlipayFactory({method: 'refund'});
 
-module.exports = async (fastify, options, next) => {
+module.exports = async fastify => {
     fastify.post('/alipay/refund', async (req, reply) => {
         try {
             let {outTradeNo, refundAmount, refundReason} = req.body;
@@ -66,7 +66,6 @@ module.exports = async (fastify, options, next) => {
         }
     });
 
-    next()
 };
 
 // 已支付订单

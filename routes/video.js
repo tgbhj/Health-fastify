@@ -1,6 +1,6 @@
 const {getVideos, getVideo, saveVideo, videoDel, uploadVideo} = require('../modules/video');
 
-module.exports = async (fastify, options, next) => {
+module.exports = async fastify => {
     fastify.register(require('fastify-multipart'));
     let funPromise = time => {
         return new Promise((resolve, reject) => {
@@ -98,5 +98,4 @@ module.exports = async (fastify, options, next) => {
         await funPromise(500);
     });
 
-    next()
 };

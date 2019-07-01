@@ -1,6 +1,6 @@
 const {admin, editType} = require('../modules/admin');
 
-module.exports = async (fastify, options, next) => {
+module.exports = async fastify => {
     fastify.get("/admin", async (req, reply) => {
         await admin(req, reply);
     });
@@ -42,5 +42,4 @@ module.exports = async (fastify, options, next) => {
      * @apiParam {String} password 123456789(登录密码)
      */
 
-    next()
 };

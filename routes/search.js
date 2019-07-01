@@ -8,7 +8,7 @@ const questions = require('../dbs/questions');
 const medicine = require('../dbs/medicine');
 const insurance = require('../dbs/insurance');
 
-module.exports = async (fastify, options, next) => {
+module.exports = async fastify => {
     function opt(opt) {
         const object = {};
         for (let type in opt) {
@@ -658,5 +658,4 @@ module.exports = async (fastify, options, next) => {
         }
     });
 
-    next()
 };

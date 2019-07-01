@@ -1,6 +1,6 @@
 const {getInfo, getInfos, setCollect, delCollect, delLike, setLike, getMed} = require('../modules/info');
 
-module.exports = async (fastify, options, next) => {
+module.exports = async fastify => {
     /**
      * @api {get} /api/infos GetInfos(获取所有医学信息)
      * @apiName GetInfos(获取所有医学信息)
@@ -271,5 +271,4 @@ module.exports = async (fastify, options, next) => {
         await getMed(req, reply)
     });
 
-    next()
 };

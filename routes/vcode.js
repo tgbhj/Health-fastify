@@ -1,6 +1,6 @@
 const getVCode = require('../modules/vcode');
 
-module.exports = async (fastify, options, next) => {
+module.exports = async fastify => {
     let funPromise = time => {
         return new Promise((resolve, reject) => {
             //Pending 进行中
@@ -38,5 +38,4 @@ module.exports = async (fastify, options, next) => {
         await funPromise(500);
     });
 
-    next()
 };

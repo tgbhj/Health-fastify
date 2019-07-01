@@ -1,6 +1,6 @@
 const {getQuestions, getQuestion, postQuestion, questionHistory, answer, docAnswer, accept, consult} = require('../modules/question');
 
-module.exports = async (fastify, options, next) => {
+module.exports = async fastify => {
     let funPromise = time => {
         return new Promise((resolve, reject) => {
             //Pending 进行中
@@ -330,5 +330,4 @@ module.exports = async (fastify, options, next) => {
         await docAnswer(req, reply)
     });
 
-    next()
 };

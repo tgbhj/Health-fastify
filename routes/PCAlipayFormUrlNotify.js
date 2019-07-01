@@ -6,7 +6,7 @@ const AlipayDb = require("../service/pay/lib2/db");
 const AlipayFactory = require('../service/pay/lib2/factory');
 const alipayFactory = new AlipayFactory();
 
-module.exports = async (fastify, options, next) => {
+module.exports = async fastify => {
     fastify.post('/alipay/callback/notify', async (req, reply) => {
         try {
             // 真实数据
@@ -74,5 +74,4 @@ module.exports = async (fastify, options, next) => {
         }
     });
 
-    next()
 };

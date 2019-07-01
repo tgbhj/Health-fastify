@@ -1,6 +1,6 @@
 const {getChannels, getChannel, createChannel, modifyChannel, channelDel, userChannel} = require('../modules/channel');
 
-module.exports = async (fastify, options, next) => {
+module.exports = async fastify => {
 
     /**
      * @api {post} /api/channel CreateChannel(创建直播间)
@@ -198,5 +198,4 @@ module.exports = async (fastify, options, next) => {
      * @apiParam {String} url rtmp://www.seeihealth.com/live/59e0497322b76d18046ad591(推流测试地址),59e0497322b76d18046ad591为推流码,用户ID作为推流码使用
      */
 
-    next()
 };

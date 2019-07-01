@@ -1,6 +1,6 @@
 const {getLines} = require('../modules/line');
 
-module.exports = async (fastify, options, next) => {
+module.exports = async fastify => {
     /**
      * @api {get} /api/lines GetLines(获取所有线路)
      * @apiName GetLines(获取所有线路)
@@ -37,5 +37,4 @@ module.exports = async (fastify, options, next) => {
         await getLines(req, reply);
     });
 
-    next()
 };

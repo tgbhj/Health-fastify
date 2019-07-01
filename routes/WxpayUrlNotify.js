@@ -6,7 +6,7 @@ const WxpayDb = require("../service/pay/lib2/wdb");
 const WxpayFactory = require('../service/pay/lib2/wfactory');
 const wxpayFactory = new WxpayFactory();
 
-module.exports = async (fastify, options, next) => {
+module.exports = async fastify => {
     fastify.post('/wxpay/callback/notify', async (req, reply) => {
         try {
             // 真实数据
@@ -77,7 +77,6 @@ module.exports = async (fastify, options, next) => {
         }
     });
 
-    next()
 };
 
 // [postData] { appid: 'wx315ac5d37a858129',

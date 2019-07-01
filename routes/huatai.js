@@ -1,6 +1,6 @@
 const {inquire, insure, payment, payInfo, getInsure} = require('../modules/huatai');
 
-module.exports = async (fastify, options, next) => {
+module.exports = async fastify => {
     /**
      * @api {post} /api/inquire QueryPrice(查询价格,step1)
      * @apiName QueryPrice(查询价格)
@@ -131,5 +131,4 @@ module.exports = async (fastify, options, next) => {
         await getInsure(req, reply)
     });
 
-    next()
 };

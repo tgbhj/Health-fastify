@@ -5,7 +5,7 @@
 const AlipayFactory = require('../service/pay/lib2/factory');
 const alipayFactory = new AlipayFactory({method: 'billQuery'});
 
-module.exports = async (fastify, options, next) => {
+module.exports = async fastify => {
     fastify.post('/alipay/billQuery', async (req, reply) => {
         try {
             let {billType, billDate} = req.body;
@@ -46,5 +46,4 @@ module.exports = async (fastify, options, next) => {
         }
     });
 
-    next()
 };

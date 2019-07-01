@@ -6,7 +6,7 @@ const wxpayFactory = new WxpayFactory();
 const WxpaySdkFactory = require('../service/pay/lib2/wfactory');
 const WxpayDb = require("../service/pay/lib2/wdb");
 
-module.exports = async (fastify, options, next) => {
+module.exports = async fastify => {
     fastify.post('/wxpay/refund', async (req, reply) => {
         try {
             // 传入参数outTradeNo/outRefundNo其中一个
@@ -77,7 +77,6 @@ module.exports = async (fastify, options, next) => {
         }
     });
 
-    next()
 };
 
 // {

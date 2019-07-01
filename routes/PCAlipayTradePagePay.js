@@ -10,7 +10,7 @@ const QueueFactory = require('../service/queue/v2/factory');
 const queueFactory = new QueueFactory();
 const snakeCaseKeys = require('snakecase-keys');
 
-module.exports = async (fastify, options, next) => {
+module.exports = async fastify => {
     /**
      * @api {post} /api/alipay/appPay AliPay(支付宝支付)
      * @apiName AliPay(支付宝支付)
@@ -220,5 +220,4 @@ module.exports = async (fastify, options, next) => {
     //     }
     // });
 
-    next()
 };

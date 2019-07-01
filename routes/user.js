@@ -1,6 +1,6 @@
 const {reg, signByPass, getUsers, getUser, fp_step1, fp_step2, getPolicy, getUserCollect, userCollect, delUserCollect, delUserLike, userLike, edit, validateToken, uploadFace, saveFace} = require('../modules/user');
 
-module.exports = async (fastify, options, next) => {
+module.exports = async fastify => {
     fastify.register(require('fastify-multipart'));
     let funPromise = time => {
         return new Promise((resolve, reject) => {
@@ -665,5 +665,4 @@ module.exports = async (fastify, options, next) => {
      * @apiParam {Url} vod 点播使用同上，直播暂时固定为YveKZe8SHsRjssWsO8d6DaxMcBGuksMn
      */
 
-    next()
 };

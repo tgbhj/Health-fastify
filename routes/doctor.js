@@ -1,6 +1,6 @@
 const {getDoctors, getDoc} = require('../modules/doctor');
 
-module.exports = async (fastify, options, next) => {
+module.exports = async fastify => {
     /**
      * @api {get} /api/doctors GetDoctors(获取所有医生信息)
      * @apiName GetDoctors(获取医生信息)
@@ -102,5 +102,4 @@ module.exports = async (fastify, options, next) => {
         await getDoc(req, reply)
     });
 
-    next()
 };

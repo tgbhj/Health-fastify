@@ -5,7 +5,7 @@ const WxpayFactory = require('../service/pay/lib2/wfactory');
 const wxpayFactory = new WxpayFactory();
 const WxpaySdkFactory = require('../service/pay/lib2/wfactory');
 
-module.exports = async (fastify, options, next) => {
+module.exports = async fastify => {
     fastify.post('/wxpay/downloadbill', async (req, reply) => {
         try {
             const {billDate, billType} = req.body;
@@ -45,5 +45,4 @@ module.exports = async (fastify, options, next) => {
         }
     });
 
-    next()
 };

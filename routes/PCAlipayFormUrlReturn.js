@@ -4,7 +4,7 @@
 const QueueFactory = require('../service/queue/v2/factory');
 const queueFactory = new QueueFactory();
 
-module.exports = async (fastify, options, next) => {
+module.exports = async fastify => {
     fastify.get('/alipay/callback/return', async (req, reply) => {
         try {
             console.log('[...]', req.query, typeof req.query);
@@ -27,5 +27,4 @@ module.exports = async (fastify, options, next) => {
         }
     });
 
-    next()
 };
