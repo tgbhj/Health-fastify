@@ -18,7 +18,7 @@ const db = mongoose.connect(`mongodb://${mongoHost}:${mongoPort}/${mongoDataBase
 db.then(() => {
     console.log('MongoDB Connect Success')
 }, error => {
-    console.log('MongoDB Connect Failed' + error)
+    console.log('MongoDB Connect Failed:' + error)
 });
 
 // const db = mongoose.connect(`mongodb://${mongoUser}:${mongoPass}@${mongoHost}:${mongoPort}/${mongoDataBase}`, {
@@ -29,7 +29,7 @@ db.then(() => {
 // db.then(() => {
 //     console.log('MongoDB Connect Success')
 // }, error => {
-//     console.log('MongoDB Connect Failed' + error)
+//     console.log('MongoDB Connect Failed:' + error)
 // });
 
 fastify.use(serveStatic(path.resolve(__dirname, 'public')));
