@@ -57,6 +57,6 @@ fastify
     .listen(httpPort)
     .then(() => console.log(`Server Start`))
     .catch(err => {
-        fastify.log.error('Error starting server:', err);
+        fastify.log.error('Server Start Error:', err);
         process.exit(1)
     });
