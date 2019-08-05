@@ -1,12 +1,9 @@
-const fastify = require('fastify')({
-    logger: {level: 'info'}
-});
-
+const fastify = require('fastify')({ logger: { level: 'info' } });
 // require('./socket');
 const path = require('path');
 require('./redis');
 const serveStatic = require('serve-static');
-const {mongoHost, mongoPort, mongoDataBase, httpPort} = require('./config/config');
+const { mongoHost, mongoPort, mongoDataBase, httpPort } = require('./config/config');
 // const {mongoHost, mongoPort, mongoDataBase, httpPort, mongoUser, mongoPass} = require('./config/config');
 const mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
@@ -43,7 +40,7 @@ const Router = {
             }
 
             if (router.routes instanceof Function) {
-                fastify.register(router.routes, {prefix: `${prefix || ''}${router.prefix || ''}`});
+                fastify.register(router.routes, { prefix: `${prefix || ''}${router.prefix || ''}` });
             }
         });
     }
