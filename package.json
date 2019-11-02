@@ -22,7 +22,7 @@
     "is-json": "^2.0.1",
     "log4js": "^4.5.1",
     "moment": "^2.24.0",
-    "mongoose": "^5.6.8",
+    "mongoose": "^5.7.5",
     "node-redis-warlock": "^0.2.0",
     "pump": "^3.0.0",
     "qrcode": "^1.4.1",
