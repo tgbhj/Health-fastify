@@ -13,7 +13,7 @@
     "bluebird": "^3.5.5",
     "blueimp-md5": "^2.11.0",
     "camelcase-keys": "^6.0.1",
-    "fastify": "^2.7.1",
+    "fastify": "^2.15.1",
     "fastify-multipart": "^1.0.2",
     "fluent-ffmpeg": "^2.1.2",
     "fxqueue": "^1.0.1",
